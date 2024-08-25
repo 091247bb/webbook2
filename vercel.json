@@ -1,0 +1,5 @@
+{
+    "rewrites":[
+        {"source":"vercel.json","destination":"index.html"}
+    ]
+}

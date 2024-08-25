@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            padding: 0 20px; 
+        }
+        .logo img {
+            max-width: 100%; 
+            height: auto; 
+        }
+        .checkbox {
+            cursor: pointer;
+            font-size: 24px; 
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            margin-left: 20px; 
+        }
+        ul li a {
+            text-decoration: none;
+            color: black; 
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="Company Logo" width="100" height="60">
+            </div>
+            <input type="checkbox" name="check" id="check" style="display:none;">
+            <label for="check" class="checkbox">
+                <i class="fas fa-bars"></i> 
+            </label>
+            <ul>
+                <li><a href="index1.html">ย้อนกลับ</a></li>
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="#">เกี่ยวกับ</a></li>
+                <li><a href="#">ข่าวสาร</a></li>
+                <li><a href="#">ติดต่อ</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="section-container">
+            <div class="content">
+                <p class="subtitle">ข้อมูลนักศึกษา</p>
+                
+                <h1 class="title">
+                    นางสาวอภิญญา เรณูแย้ม<br>
+                    รหัสนักศึกษา: 6604101398<br>
+                    สาขาวิชา: วิทยาการคอมพิวเตอร์รุ่นที่29<br>
+                    อีเมล: mjuxxxxxxxx@mju.ac.th<br>
+                    เบอร์โทร: xxx-xxx-xxxx<br>
+                </h1>
+            </div>
+            <div class="image">
+                <img src="me.jpg" alt="">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

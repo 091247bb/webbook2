@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+:root {
+    --main-color: #FFAF00;
+    --black: #000;
+    --dark-gray: #333;
+    --white: #fff;
+    --light-grey: #EDEDED;
+    --light-color: #666;
+}
+
+* {
+    font-family: "Roboto Slab", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .3s ease-in;
+}
+  
+html {
+    font-size: 62.6%;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: rgb(101, 175, 231);
+    padding: 1rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.checkbox {
+    cursor: pointer;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 150;
+    background-color: rgb(101, 175, 231);
+    padding: 1rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.header .navbar a {
+    color: var(--dark-gray);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 1rem;
+}
+
+.header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.header .icons {
+    display: none;
+}
+
+.header .icons i {
+    font-size: 3rem;
+    color: var(--main-color);
+    cursor: pointer;
+}
+.home {
+    background: url(ja.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    border-radius: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.home .content {
+    padding: 3rem;
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.home .content span {
+    font-size: 6rem;
+    color: var(--white);
+    text-transform: capitalize;
+    text-shadow: .1rem .5rem .1rem var(--dark-gray);
+    width: 60rem;
+}
+
+.home .content h1 {
+    font-size: 6rem;
+    color: var(--white);
+    text-transform: capitalize;
+    text-shadow: .1rem .5rem .1rem var(--dark-gray);
+    width: 60rem;
+}
+
+.home .content h1 span {
+    font-size: 6rem;
+    text-transform: capitalize;
+    color: var(--main-color);
+}
+
+.home .content .flex-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 830px) {
+    html {
+        font-size: 55%;
+    }
+    
+    .header {
+        position: relative;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 6rem;
+        left: 0;
+        right: 0;
+        background-color: #EDEDED;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        gap: 2rem;
+        clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
+    }
+
+    .header .navbar.show {
+        clip-path: none; /* Corrected to use 'none' to make it visible */
+    }
+
+    .header .icons {
+        display: inline;
+    }
+
+    .header .icons .fa-xmark {
+        display: none;
+    }
+
+    .header .icons .fa-xmark.show {
+        display: inline;
+    }
+
+    .header .icons .fa-bars.hide {
+        display: none;
+    }
+}
+.container img{
+    width: 200px;
+    flex-direction: row;
+    height: 200px;
+    margin: 12px;
+    object-fit: cover;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
+    gap: 10px; /* Adjust gap between items as needed */
+  }
+  
+  .container {
+    position: relative;
+    width: 100%; /* Full width of the grid cell */
+    overflow: hidden; /* Ensures content does not overflow */
+  }
+  
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  
+  .container:hover .image {
+    opacity: 0.3;
+  }
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 15px 25px;
+    text-align: center; /* Center the text */
+  }
+  
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home .content h1 {
+        font-size: 5rem;
+        width: 100%;
+    }
+
+    .home .content h1 span {
+        font-size: 5rem;
+    }
+}
